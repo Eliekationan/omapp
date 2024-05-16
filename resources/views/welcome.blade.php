@@ -10,7 +10,7 @@
         <link rel="dns-prefetch" href="//fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
         <link rel="shortcut icon" href="{{ asset('images/logo.png   ') }}">
-    
+
         <!-- Scripts -->
         @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
@@ -19,11 +19,11 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="{{asset('css/homePage.css')}}">
         <!-- Styles -->
-        
+
     </head>
     <body class="">
         <div class="container" style="">
-            <nav class="navbar navbar-expand-lg" class="text-center">
+            <nav class="navbar navbar-expand-lg" class="text-center px-2" style="position:sticky; top:0;">
                 <div class="logo-zone d-flex align-items-center">
                     <img width="50" src="images/logo.png" alt="" srcset="">
                     {{-- <h2 class="enterprise-name" style="margin-left:14px; color: #B3F0E9;">Organization Manager</h2> --}}
@@ -40,7 +40,7 @@
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent" style="">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-2 rounded">
                     <li class="nav-item dropdown">
                     <a
                         style="color:#4E4E68"
@@ -71,7 +71,7 @@
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>
                         <li><a class="dropdown-item" href="#">Another action</a></li>
-                        
+
                     </ul>
                     </li>
                     <div class="mr-2">
@@ -81,13 +81,68 @@
                         <button class="btn sign-up-btn" style="">S'enregistrer</button>
                     </div>
                 </ul>
-                
+
                 </div>
-                
+
             </nav>
+
+            <div class="card-body">
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6">
+                        <img src="{{ asset('images/roadmap.png') }}" alt="RoadMap">
+                    </div>
+                    <div class="col-12 col-md-6 p-4">
+                        <div class="title text-center mb-4">Application ideale pour votre organisation</div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nesciunt aut? Sapiente cupiditate aut eligendi tempora cum quisquam, odio debitis veritatis ipsum, possimus incidunt hic soluta adipisci temporibus voluptatum repudiandae.
+                            orem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nesciunt aut? Sapiente cupiditate aut eligendi tempora cum quisquam, odio debitis veritatis ipsum, possimus incidunt hic soluta adipisci temporibus voluptatum repudiandae.
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 p-4">
+                        <div class="title text-center mb-4">Gestion des utilisateurs et leurs rôles</div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nesciunt aut? Sapiente cupiditate aut eligendi tempora cum quisquam, odio debitis veritatis ipsum, possimus incidunt hic soluta adipisci temporibus voluptatum repudiandae.
+                            orem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nesciunt aut? Sapiente cupiditate aut eligendi tempora cum quisquam, odio debitis veritatis ipsum, possimus incidunt hic soluta adipisci temporibus voluptatum repudiandae.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="{{ asset('images/roadmap.png') }}" alt="RoadMap">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6">
+                        <img src="{{ asset('images/roadmap.png') }}" alt="RoadMap">
+                    </div>
+                    <div class="col-12 col-md-6 p-4">
+                        <div class="title text-center mb-4">Gestion des adhésion</div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nesciunt aut? Sapiente cupiditate aut eligendi tempora cum quisquam, odio debitis veritatis ipsum, possimus incidunt hic soluta adipisci temporibus voluptatum repudiandae.
+                            orem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nesciunt aut? Sapiente cupiditate aut eligendi tempora cum quisquam, odio debitis veritatis ipsum, possimus incidunt hic soluta adipisci temporibus voluptatum repudiandae.
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-12 col-md-6 p-4">
+                        <div class="title text-center mb-4">Gestion des projets</div>
+                        <div class="content">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nesciunt aut? Sapiente cupiditate aut eligendi tempora cum quisquam, odio debitis veritatis ipsum, possimus incidunt hic soluta adipisci temporibus voluptatum repudiandae.
+                            orem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, nesciunt aut? Sapiente cupiditate aut eligendi tempora cum quisquam, odio debitis veritatis ipsum, possimus incidunt hic soluta adipisci temporibus voluptatum repudiandae.
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <img src="{{ asset('images/roadmap.png') }}" alt="RoadMap">
+                    </div>
+                </div>
+            </div>
         </div>
+
     </body>
     <style>
+        body{
+            background-color: white !important;
+        }
         .navbar-toggler-icon {
             color: white !important;
         }
@@ -101,7 +156,10 @@
             border: 2px solid #4E4E68
         }
         .navbar-nav{
-            padding:2%; 
+            padding:2%;
+        }
+        nav{
+            background-color:lightblue;
         }
         @media screen and (max-width:990px){
             .navbar-nav{
@@ -109,6 +167,13 @@
                 background-color: lightblue;
                 border: solid 1px #4E4E68
             }
+                nav{
+                background-color:white;
+            }
+        }
+        .title{
+            font-family: cursive, Georgia, 'Times New Roman', Times, serif;
+            font-size: 25px;
         }
     </style>
 </html>

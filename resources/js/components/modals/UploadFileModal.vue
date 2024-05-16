@@ -21,7 +21,7 @@
                 <label for="input-file" class="drop-zone d-flex align-items-center justify-content-center"
                 style="cursor: pointer;"
                 @dragover.prevent @dragenter.prevent @drop="handleDrop">
-                  drag and drop 
+                  drag and drop
                 </label>
               </div>
               <br>
@@ -76,7 +76,6 @@ import { toast } from 'vue3-toastify';
 import { ref } from 'vue'
 import { ProgressBar } from 'vue3-progress-bar'
 import Auth from '../../services/auth.js'
-import { message } from "laravel-mix/src/Log";
 export default {
   name: "uploadFileModal",
   inject: ["EventBus"],
@@ -84,10 +83,10 @@ export default {
     ProgressBar
   },
   props: {
-      
+
   },
   computed:{
-      
+
   },
 
   data() {
@@ -141,12 +140,12 @@ export default {
     handleFiles(event){
       this.filesToUpload = [...event.target.files]
       console.log({filesToUpload: this.filesToUpload})
-      
+
       this.filesToUpload = this.filesToUpload.map(el=> {
          return {
-          file: el, 
+          file: el,
           file_name:el.name,
-          description:'', 
+          description:'',
           ext: el.type.split("/")[1],
           user_id: this.authUser.id,
           is_sent: false
@@ -157,7 +156,7 @@ export default {
       // Handle file upload logic here
       // For example, you can use FileReader to read file content or use FormData to send files to a server
       const data = new FormData()
-                
+
       console.log(files);
     },
     saveFiles(){
@@ -197,27 +196,27 @@ export default {
 }
 @media screen and (max-width: 426px) {
   .contrib-modal{
-      background-color: white; 
+      background-color: white;
       width: 100%;
       margin-top: 45px;
-      border-radius: 5px; 
+      border-radius: 5px;
       overflow: auto;
   }
 }
 @media screen and (min-width: 426px) and (max-width:769px){
   .contrib-modal{
-      background-color: white; 
+      background-color: white;
       width: 100%;
-      border-radius: 5px; 
+      border-radius: 5px;
       margin-top: 45px;
       overflow: auto;
   }
 }
 @media screen and (min-width: 769px) and (max-width:1024px){
   .contrib-modal{
-      background-color: white; 
+      background-color: white;
       width: 100%;
-      border-radius: 5px; 
+      border-radius: 5px;
       margin-top: 45px;
       overflow: auto;
   }

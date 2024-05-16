@@ -26,7 +26,7 @@
             <nav class="navbar navbar-expand-lg" class="text-center">
                 <div class="logo-zone d-flex align-items-center">
                     <img width="50" src="images/logo.png" alt="" srcset="">
-                    <h2 class="enterprise-name" style="margin-left:14px; color: #B3F0E9;">Organization Manager</h2>
+                    {{-- <h2 class="enterprise-name" style="margin-left:14px; color: #B3F0E9;">Organization Manager</h2> --}}
                   </div>
                 <button
                 class="navbar-toggler"
@@ -39,7 +39,7 @@
                 >
                 <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 20%">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                     <a
@@ -74,10 +74,16 @@
                         
                     </ul>
                     </li>
-                    
+                    <div class="mr-2">
+                        <button class="btn login-btn" style="">Se connecter</button>
+                    </div>
+                    <div class="">
+                        <button class="btn sign-up-btn" style="">S'enregistrer</button>
+                    </div>
                 </ul>
                 
                 </div>
+                
             </nav>
         </div>
     </body>
@@ -90,6 +96,19 @@
         }
         ul{
             width: 150% !important;
+        }
+        .login-btn, .sign-up-btn{
+            border: 2px solid #4E4E68
+        }
+        .navbar-nav{
+            padding:2%; 
+        }
+        @media screen and (max-width:990px){
+            .navbar-nav{
+                width: 100% !important;
+                background-color: lightblue;
+                border: solid 1px #4E4E68
+            }
         }
     </style>
 </html>
